@@ -1,0 +1,137 @@
+.footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .footer__contact,
+  .footer__social {
+    min-width: 280px;
+    flex: 1;
+  }
+  
+  .footer__title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #a0806d;
+    text-transform: uppercase;
+  }
+  
+  .footer__item {
+    margin-bottom: 10px;
+  }
+  
+  .footer__item a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer__item a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+  }
+  
+  .footer__social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer__social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer__social-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .footer__social-link:hover {
+    color: #007BFF;
+    text-decoration: underline;
+  }
+  
+  .footer__social-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1%;
+    margin-left: 20px; /* Отступ от текста */
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media (max-width: 768px) {
+    .footer__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .footer__contact,
+    .footer__social {
+      text-align: center;
+      min-width: unset;
+      flex: unset;
+    }
+  
+    .footer__social-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;  /* Расстояние между иконкой и текстом */
+      }
+      
+      .footer__social-icon {
+        font-size: 1.5em;  /* Размер иконки */
+        color: #25D366;  /* Цвет иконки WhatsApp */
+      }
+  
+    .footer__social-image {
+      width: 80px;
+      height: 80px;
+      margin-top: 10px;
+    }
+  
+    .footer__title {
+      font-size: 1.2em;
+    }
+  
+    .footer__social-link {
+      font-size: 1em;
+    }
+  }
+  
+  /* Адаптивность для очень маленьких экранов */
+  @media (max-width: 480px) {
+    .footer__title {
+      font-size: 1.1em;
+    }
+  
+    .footer__social-link {
+      font-size: 1em;
+    }
+  
+    .footer__item {
+      font-size: 0.9em;
+    }
+  
+    .footer__container {
+      gap: 20px;
+    }
+  }
+  
