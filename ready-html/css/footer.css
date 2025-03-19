@@ -15,6 +15,11 @@
     padding: 0 15px;
   }
   
+  #about {
+    padding-top: 100px; /* Подберите значение в зависимости от высоты вашего заголовка */
+    margin-top: -100px; /* Компенсируем отступ, чтобы переход был плавным */
+}
+
   .footer__contact,
   .footer__social {
     min-width: 280px;
@@ -72,7 +77,8 @@
     height: 100px;
     object-fit: cover;
     border-radius: 1%;
-    margin-left: 20px; /* Отступ от текста */
+    margin-left: 20px;
+    margin-right: 60px; /* Отступ от текста */
   }
   
   /* Адаптивность для мобильных устройств */
@@ -132,6 +138,70 @@
   
     .footer__container {
       gap: 20px;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+
+
+
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .blinking-button {
+    position: fixed;
+    bottom: 20px; /* Расстояние от нижнего края экрана */
+    right: 10px; /* Расстояние от правого края экрана */
+    background-color: #ff774d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: blink 1.5s infinite alternate;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+    transition: transform 0.3s;
+    z-index: 1000; /* Убедитесь, что кнопка поверх других элементов */
+    cursor: pointer;
+  }
+  
+  .blinking-button:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+      box-shadow: 0 0 15px rgba(255, 127, 77, 0.89);
+    }
+    100% {
+      opacity: 0.6;
+      box-shadow: 0 0 5px rgba(255, 77, 77, 0.4);
     }
   }
   
